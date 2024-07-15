@@ -1,0 +1,16 @@
+#MaterialDetail {
+  h1 {
+    color: var(--brand-color);
+  }
+  .container {
+    p {
+      font-size: 1.5rem;
+      padding: 15px;
+      margin-bottom: 50px;
+    }
+    a {
+      text-decoration: none;
+      color: var(--secondary-bg-color);
+    }
+  }
+}

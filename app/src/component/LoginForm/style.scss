@@ -1,0 +1,49 @@
+#login__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  background: var(--card-color);
+  padding: 45px 15px 15px;
+  border-radius: 15px;
+  min-width: 50%;
+
+  @media screen and (prefers-color-scheme: dark) {
+    background: transparent;
+    border: 1px solid var(--card-color)
+  }
+
+  & .inputGroup {
+    margin-bottom: 10px;
+    width: 100%;
+    background: transparent;
+
+    & input {
+      background: transparent;
+      outline: none;
+      padding: 5px 15px;
+      border: 1px solid;
+      border-color:  var(--primary-bg-color);
+      border-radius: 15px;
+      width: 100%;
+      font-family: var(--text-font);
+      &::placeholder {
+        color: var(--secondary-bg-color);
+        font-family: var(--subtitle-font);
+      }
+      @media screen and (prefers-color-scheme: dark) {
+        border-color: var(--white-color);
+      }
+    }
+  }
+
+  & input[type="submit"] {
+    width: 100%;
+    transition: all .3s;
+
+    &:disabled {
+      background: var(--secondary-bg-color);
+    }
+  }
+}

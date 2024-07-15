@@ -1,0 +1,54 @@
+.RealisationItem {
+  border: 1px solid;
+  border-color: var(--light-text-color);
+  padding: 10px 18px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  width: -webkit-fill-available;
+  height: 100%;
+
+  @media screen and (prefers-color-scheme: light) {
+    background: var(--light-text-color);
+  }
+
+
+  .header {
+    background: transparent;
+    .title {
+      color: var(--brand-color);
+      text-transform: capitalize;
+    }
+    .category {
+      background: transparent;
+    }
+  }
+
+  .materialsList {
+    display: flex;
+    gap: 15px;
+    background: transparent;
+    align-items: flex-end;
+  }
+
+  .footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: transparent;
+    div, a {
+      background: transparent;
+      text-decoration: none;
+      @media screen and (prefers-color-scheme: light) {
+        color: var(--secondary-bg-color);
+      }
+    }
+    button:disabled {
+      background: var(--secondary-bg-color);
+      cursor: not-allowed;
+    }
+  }
+}

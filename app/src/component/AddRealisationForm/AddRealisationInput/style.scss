@@ -1,0 +1,86 @@
+#AddRealisationInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: all .3s;
+  .inputGroup:has(select) {
+    display: flex;
+    gap: 10px;
+
+    select {
+      padding: 0 10px;
+      transform: translateX(1000%);
+      animation: enterInView .5s forwards;
+    }
+  }
+  .inputGroup__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    & .label {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      z-index: 1;
+      opacity: 0;
+      transition: all .3s;
+      padding: 0 10px;
+      border-radius: 15px 15px 0 0;
+      font-size: .8rem;
+      animation: enterInViewLabel .5s forwards;
+      animation-delay: .3s;
+    }
+
+    & input {
+      position: relative;
+      transform: translateX(1000%);
+      padding: 5px 15px;
+      border: 2px solid;
+      border-radius: 15px;
+      border-color: var(--light-text-color);
+      width: 100%;
+      transition: all .3s;
+      outline: none;
+      animation: enterInView .5s forwards;
+      @media screen and (prefers-color-scheme: light) {
+        border-color: var(--text-color);
+      }
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:focus, &:not(:placeholder-shown) {
+        border-color: var(--primary-bg-color);
+      }
+
+      &:focus ~ span, &:not(:placeholder-shown) ~ span {
+        top: 2px;
+        transform: translateY(-100%) translateX(0);
+        border: 2px solid;
+        border-color: var(--primary-bg-color);
+        border-bottom: 2px solid var(--text-color);
+        @media screen and (prefers-color-scheme: light) {
+          border-bottom: 2px solir var(--light-text-color);
+        }
+      }
+    }
+  }
+}
+
+@keyframes enterInView {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes enterInViewLabel {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

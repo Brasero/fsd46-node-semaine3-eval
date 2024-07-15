@@ -1,0 +1,22 @@
+#nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+  background: var(--primary-bg-color);
+  position: relative;
+
+  & .brandLink {
+    background: transparent;
+    text-decoration: none;
+    letter-spacing: 3px;
+    margin-right: auto;
+    & h1 {
+      color: var(--brand-color);
+    }
+  }
+
+  & ul {
+    background: none;
+  }
+}

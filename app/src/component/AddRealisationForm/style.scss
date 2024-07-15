@@ -1,0 +1,54 @@
+#AddRealisationForm {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3rem;
+
+  & .subtitle {
+    font-size: 1.4rem;
+    font-family: var(--subtitle-font);
+  }
+
+  & .button_add_input {
+    display: flex;
+    gap: 1rem;
+
+    & button {
+      aspect-ratio: 1/1;
+      padding: 0 .7rem;
+      border: 1px solid;
+      border-color:  var(--light-text-color);
+      border-radius: 5px;
+      font-weight: 800;
+      font-family: var(--title-font);
+      transition: all .3s;
+
+      &:hover {
+        color: var(--light-text-color);
+        background: var(--primary-bg-color);
+      }
+
+      &:disabled {
+        color: var(--secondary-bg-color);
+        border-color: var(--secondary-bg-color);
+        &:hover {
+          color: var(--secondary-bg-color);
+          background: transparent;
+          cursor: not-allowed;
+        }
+      }
+
+      @media screen and (prefers-color-scheme: light) {
+        border-color: var(--text-color);
+      }
+    }
+  }
+
+  & .submit {
+    width: 100%;
+    &:disabled {
+      background: var(--secondary-bg-color);
+    }
+  }
+}

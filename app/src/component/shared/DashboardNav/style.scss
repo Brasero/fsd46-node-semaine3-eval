@@ -1,0 +1,21 @@
+#dashboardNav {
+  .navLink {
+    @media screen and (prefers-color-scheme: light) {
+      color: var(--brand-color);
+      &.active {
+        color: var(--text-color);
+      }
+    }
+  }
+  .disconnect {
+    background: transparent;
+    color: darkred;
+    border: none;
+    font-family: var(--text-font);
+    transition: all .3s;
+    &:hover {
+      cursor: pointer;
+      scale: 1.1;
+    }
+  }
+}
